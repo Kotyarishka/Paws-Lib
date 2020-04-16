@@ -19,9 +19,13 @@ Version: 0.1
 Paws = Paws or {}
 Paws.Lib = Paws.Lib or {}
 
-FILESYSTEM = {
+local FILESYSTEM = {
     'meta',
     'chat'
+}
+
+local NETS = {
+    'Paws.Lib.Msg'
 }
 
 local function LoadLib()
@@ -34,6 +38,11 @@ local function LoadLib()
                 if load then load() end
             end
         end 
+    end
+
+    for k, v in pairs(NETS) do
+        util.AddNetworkString(v)
+        MsgC(Color(0, 255, 0), '[Aw... Paws!]', '[Lib]', ' Registered Network string "'..v..'" successfully\n' )
     end
 end
 
