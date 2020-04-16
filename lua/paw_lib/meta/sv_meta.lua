@@ -50,3 +50,11 @@ function Paws.Lib.Module(UID)
     local i = table.insert(Paws.Modules, MODULE)
     return Paws.Modules[i]
 end
+
+function Paws.GetModule(UID)
+    for k, v in ipairs(Paws.Modules) do
+        if v.UID == UID then return Paws.Modules[k] end
+    end
+
+    return nil
+end
