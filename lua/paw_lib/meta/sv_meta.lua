@@ -29,8 +29,6 @@ m.MAIN_ROOT = 'paw'
 m.CONFIG = 'config.lua'
 m.INIT = 'init.lua'
 
-
-
 meta.__index = m
 
 /*

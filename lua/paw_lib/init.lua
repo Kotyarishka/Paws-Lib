@@ -16,8 +16,12 @@ Version: 0.1
 
 */
 
+Paws = Paws or {}
+Paws.Lib = Paws.Lib or {}
+
 FILESYSTEM = {
-    'meta'
+    'meta',
+    'chat'
 }
 
 local function LoadLib()
