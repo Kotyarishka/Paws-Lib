@@ -6,12 +6,17 @@ Made by Kot from '🐾 Aw... Paws!'
 
 */
 
+Paws = Paws or {}
+Paws.Lib = Paws.Lib or {}
 
 /*
 
 Chat
 
 */
+
+Paws.Lib.Chat = Paws.Lib.Chat or {}
+Paws.Lib.Chat.Config = Paws.Lib.Chat.Config or {}
 
 Paws.Lib.Chat.Config.PREFIX = '[Paws]'
 Paws.Lib.Chat.Config.PREFIX_COLOR = Color(255, 195, 56)
