@@ -1,11 +1,3 @@
-/*
-
-Chat Messages handler for Paws Lib.
-
-Made by Kot from "🐾 Aw... Paws!"
-
-*/
-
 local function Handler(_, sender)
     local ply = net.ReadEntity()
     local MSG_TYPE = net.ReadInt(8)
