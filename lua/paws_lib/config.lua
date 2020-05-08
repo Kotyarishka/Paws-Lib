@@ -2,9 +2,12 @@ local MODULE = PAW_MODULE('lib')
 
 MODULE.Config = {
     Colors = {
+        Text = Color(255, 255, 255),
         Base = Color(40, 40, 40),
+        BaseDarker = Color(61, 61, 61),
         Button = Color(51, 51, 51),
-        ButtonHover = Color(59, 137, 255),
+        ButtonHover = Color(59, 137, 255), 
+        CloseHover = Color(255, 89, 89)
     },
     Chat = {
         NONE_COLOR = Color(255, 255, 255),
