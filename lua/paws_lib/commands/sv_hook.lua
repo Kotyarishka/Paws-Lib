@@ -11,7 +11,7 @@ local function ParseCommand(pPlayer, sText)
 
         sText = string.sub(sText, string.len(sCommand) + 2)
 
-        local tCommand = Paws.Lib.GetCommand(sCommand)
+        local tCommand = MODULE:Command(sCommand)
 
         if tCommand != nil then
             tCommand:OnRun(pPlayer, sText)

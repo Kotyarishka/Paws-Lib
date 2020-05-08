@@ -7,6 +7,8 @@ MODULE.Config = {
         ButtonHover = Color(59, 137, 255),
     },
     Chat = {
+        NONE_COLOR = Color(255, 255, 255),
+
         PREFIX = '[Paws]',
         PREFIX_COLOR = Color(255, 195, 56),
 

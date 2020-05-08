@@ -106,7 +106,7 @@ local function load()
                         local load = include(m.ROOT..'/'..dir..'/'..v)
                         if load then load() end
                     end 
-                end 
+                end
 
                 if string.StartWith(v, 'cl') then
                     if CLIENT then
