@@ -10,6 +10,10 @@ local m = {
     Title = 'New Command',
     Description = 'New Command Description',
 
+    Run = function(self, pPlayer, sText)
+        -- To edit
+    end,
+
     OnRun = function(self, pPlayer, sText)
         self.Run(pPlayer, sText)
     end,
@@ -41,8 +45,10 @@ function MODULE:Command(command, get)
 
     self.Commands = self.Commands or {} // MODULE.Commands = MODULE.Comands or {}
     
-    for k, v in ipairs(self.Commands) do
-        if v.command == command then return self.Commands[k] end
+    if get then
+        for k, v in ipairs(self.Commands) do
+            if v.command == command then return self.Commands[k] end
+        end
     end
 
     local CommandTable = {

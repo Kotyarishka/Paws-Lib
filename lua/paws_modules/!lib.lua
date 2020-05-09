@@ -7,7 +7,8 @@ local MODULE = PAW_MODULE('lib')
     :SetFileSystem({
         'chat',
         'commands',
-        'download'
+        'download',
+        'vgui'
     })
     :SetNets({
         'Paws.Lib.Msg'
