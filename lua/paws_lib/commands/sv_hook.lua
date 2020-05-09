@@ -15,9 +15,9 @@ local function ParseCommand(pPlayer, sText)
 
         if tCommand != nil then
             tCommand:OnRun(pPlayer, sText)
-        end
 
-        return ''
+            return ''
+        end        
     end
 end 
 

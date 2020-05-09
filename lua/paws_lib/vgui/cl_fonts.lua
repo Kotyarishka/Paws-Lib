@@ -8,7 +8,7 @@ surface.CreateFont( 'font_base_54', {font = 'Arial',size = 38,weight = 0,extende
 surface.CreateFont( 'font_base_18', {font = 'Arial',size = 18,weight = 500,extended = true,})
 surface.CreateFont( 'font_base_small', {font = 'Default',size = 14,weight = 300,underline = true,extended = true,})
 surface.CreateFont( 'font_base_12', {font = 'Default',size = 12,weight = 0,underline = true,extended = true})
-surface.CreateFont( 'font_base_hud', {font = 'Arial',size = 26,weight = 0,underline = true,extended = true})
+surface.CreateFont( 'font_base_hud', {font = 'Arial',size = 26,weight = 0,underline = false,extended = true})
 surface.CreateFont( 'font_base_84_normal', {font = 'Arial',size = 84,weight = 0,underline = true,extended = true})
 surface.CreateFont( 'font_base_84', {font = 'Exo 2 Semi Bold',size = 84,weight = 0,underline = true,extended = true})
 surface.CreateFont( 'font_base_54', {font = 'Exo 2 Semi Bold',size = 54,weight = 0,underline = true,extended = true})
