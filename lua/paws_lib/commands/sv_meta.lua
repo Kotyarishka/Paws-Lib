@@ -49,6 +49,7 @@ function MODULE:Command(command, get)
         for k, v in ipairs(self.Commands) do
             if v.command == command then return self.Commands[k] end
         end
+        return nil
     end
 
     local CommandTable = {
