@@ -93,6 +93,7 @@ local function load()
         AddCSLuaFile(EP.m..'/'..v) 
 
         MsgC(Color(0,255,0), '[Aw... Paws!] Loading module "'..m.Title..'" by '..m.Author..' (v: '..m.Version..')'..'\n')
+        hook.Run('Paws.'..m.uID..'.Loading', m)
 
         include(m.ROOT..'/'..m.CONFIG)
         AddCSLuaFile(m.ROOT..'/'..m.CONFIG)
@@ -136,6 +137,8 @@ local function load()
         end
 
         MsgC(Color(0,255,0), '[Aw... Paws!] Loaded module "'..m.Title..'" by '..m.Author..' (v: '..m.Version..')'..'\n')
+        m.Loaded = true
+        hook.Run('Paws.'..m.uID..'.Loaded', m)
     end
 end
 
@@ -144,5 +147,5 @@ if GAMEMODE then
 else
 	hook.Add('InitPostEntity', 'KTS.Load.RanksSystem', function()
         load()
-	end)  
+	end)
 end

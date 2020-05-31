@@ -622,6 +622,14 @@ classes.FadeIn = function(pnl, time, alpha)
 	pnl:AlphaTo(alpha, time)
 end
 
+classes.FadeOut = function(pnl, time, alpha)
+	time = time || 0.2
+	alpha = alpha || 0
+
+	pnl:SetAlpha(255)
+	pnl:AlphaTo(alpha, time)
+end
+
 classes.HideVBar = function(pnl)
 	local vbar = pnl:GetVBar()
 	vbar:SetWide(0)
