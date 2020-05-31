@@ -1,20 +1,20 @@
 local MODULE = PAW_MODULE('lib')
 
 local function ParseCommand(pPlayer, sText)
-
+    
     local sPrefix = string.sub(sText, 0, 1)
 
     if sPrefix == '/' or sPrefix == '!' then
         local sText = string.sub(sText, 2)
-        local tArgs = string.Split(sText, ' ')
-        local sCommand = tArgs[1]
 
-        sText = string.sub(sText, string.len(sCommand) + 2)
+        local tArgs = string.Split(sText, ' ')
+        local sCommand = tArgs[1]      
+        sText = table.concat(tArgs, ' ', 2)
 
         local tCommand = MODULE:Command(sCommand, true)
 
         if tCommand != nil then
-            tCommand:OnRun(pPlayer, sText)
+            tCommand:OnRun(pPlayer, sText, tArgs)
 
             return ''
         end        

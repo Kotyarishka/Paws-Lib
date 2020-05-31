@@ -7,7 +7,10 @@ MODULE.Config = {
         BaseDarker = Color(61, 61, 61),
         Button = Color(51, 51, 51),
         ButtonHover = Color(59, 137, 255), 
-        CloseHover = Color(255, 89, 89)
+        CloseHover = Color(255, 89, 89),
+
+        Green = Color(90, 200, 90),
+        Red = Color(255, 69, 69) 
     },
     Chat = {
         NONE_COLOR = Color(255, 255, 255),
