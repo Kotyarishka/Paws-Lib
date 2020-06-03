@@ -20,9 +20,10 @@ surface.CreateFont( 'font_notify', {font = 'Arial',size = 18,weight = 500,extend
 surface.CreateFont( 'font_base_45', {font = 'Arial',size = 45,weight = 100, extended = true,})
 surface.CreateFont( 'font_roboto_24', { font = 'Roboto', size = 24, weight = 100, extended = true })
 surface.CreateFont( 'font_roboto_21', { font = 'Roboto', size = 21, weight = 100, extended = true })
+surface.CreateFont( 'font_sans_35', { font = 'Open Sans', size = 35, weight = 500, extended = true })
 surface.CreateFont( 'font_sans_24', { font = 'Open Sans', size = 24, weight = 500, extended = true })
 surface.CreateFont( 'font_sans_21', { font = 'Open Sans', size = 21, weight = 500, extended = true })
-surface.CreateFont( 'font_sans_16', { font = 'Open Sans', size = 16, weight = 500, extended = true })
+surface.CreateFont( 'font_sans_16', { font = 'Open Sans', size = 16, weight = 500, extended = true }) 
 
 surface.CreateFont( 'font_base_big_s', {font = 'Arial', blursize = 5, size = 81, weight = 500, extended = true})
 

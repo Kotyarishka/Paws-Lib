@@ -219,6 +219,24 @@ classes.Background = function(pnl, col, rad, rtl, rtr, rbl, rbr)
 	end)
 end
 
+classes.BackgroundOutlined = function(pnl, col, ocol, rad, rtl, rtr, rbl, rbr)
+	pnl:On("Paint", function(s, w, h)
+		if(rad && rad > 0) then
+			if(rtl != nil) then
+				draw.RoundedBoxEx(rad, 0, 0, w, h, col, rtl, rtr, rbl, rbr)
+			else
+				
+				draw.RoundedBox(rad, 0, 0, w, h, ocol)
+				draw.RoundedBox(rad, 1, 1, w-2, h-2, col)
+				
+			end
+		else
+			surface.SetDrawColor(col)
+			surface.DrawRect(0, 0, w, h)
+		end
+	end)
+end
+
 classes.Material = function(pnl, mat, col)
 	col = col || Color(255, 255, 255)
 
@@ -578,6 +596,21 @@ classes.Stick = function(pnl, dock, margin, dontInvalidate)
 	if(margin > 0) then
 		pnl:DockMargin(margin, margin, margin, margin)
 	end
+
+	if(!dontInvalidate) then
+		pnl:InvalidateParent(true)
+	end
+end
+
+classes.SmartStick = function(pnl, dock, dockLeft, dockTop, dockRight, dockBottom, dontInvalidate)
+	dock = dock || FILL
+	dockLeft = dockLeft || 0
+	dockTop = dockTop || 0
+	dockRight = dockRight || 0
+	dockBottom = dockBottom || 0
+
+	pnl:Dock(dock)
+	pnl:DockMargin(dockLeft, dockTop, dockRight, dockBottom)
 
 	if(!dontInvalidate) then
 		pnl:InvalidateParent(true)

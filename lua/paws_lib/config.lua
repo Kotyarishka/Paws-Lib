@@ -6,7 +6,7 @@ MODULE.Config = {
         Base = Color(40, 40, 40),
         BaseDarker = Color(61, 61, 61),
         Button = Color(51, 51, 51),
-        ButtonHover = Color(59, 137, 255), 
+        ButtonHover = Color(255, 153, 0), 
         CloseHover = Color(255, 89, 89),
 
         Green = Color(90, 200, 90),
@@ -34,6 +34,9 @@ MODULE.Config = {
             ERROR = 3,
             RP = 4
         }
+    },
+    Fonts = {
+        MainFont = 'Open Sans'
     },
     Commands = {
         Prefixes = {
