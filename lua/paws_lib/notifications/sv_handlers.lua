@@ -1,11 +1,9 @@
 local function Handler(_, sender)
     local ply = net.ReadEntity()
-    local MSG_TYPE = net.ReadInt(8)
-    local data = net.ReadTable()
+    local data = net.ReadData(255)
 
-    -- net.Start('Paws.Lib.Msg')
-    --     net.WriteInt(MSG_TYPE, 8)
-    --     net.WriteTable(data)
+    -- net.Start('Paws.Lib.Notify')
+    --     net.WriteData(data, 255)
     -- net.Send(ply)
 
     for k,v in ipairs(player.GetHumans()) do
@@ -14,6 +12,7 @@ local function Handler(_, sender)
         end
     end
 
+    print('ПИДОР ОБНАРУЖЕН ->', sender)
 end
 
-net.Receive('Paws.Lib.Msg', Handler)
+net.Receive('Paws.Lib.Notify', Handler)

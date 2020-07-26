@@ -8,10 +8,13 @@ local MODULE = PAW_MODULE('lib')
         'chat',
         'commands',
         'download',
-        'vgui'
+        'vgui',
+        'elements',
+        'notifications'
     })
     :SetNets({
-        'Paws.Lib.Msg'
+        'Paws.Lib.Msg',
+        'Paws.Lib.Notify'
     })
 
 return MODULE 

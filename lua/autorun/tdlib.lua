@@ -128,6 +128,23 @@ classes.FadeHover = function(pnl, col, speed, rad)
 	end)
 end
 
+classes.FadeHoverAnalog = function(pnl, col, speed, rad)
+	col = col || Color(255, 255, 255, 30)
+	speed = speed || 6
+
+	pnl:SetupTransition("FadeHover", speed, TDLibUtil.HoverFunc)
+	pnl:On("Paint", function(s, w, h)
+		local col = ColorAlpha(col, col.a*s.FadeHover)
+
+		if(rad && rad > 0) then
+			draw.RoundedBox(rad, 0, 0, w, h, col)
+		else
+			surface.SetDrawColor(col)
+			surface.DrawRect(0, 0, w, h)
+		end
+	end)
+end
+
 classes.BarHover = function(pnl, col, height, speed)
 	col = col || Color(255, 255, 255, 255)
 	height = height || 2

@@ -6,7 +6,7 @@ MODULE.Config = {
         Base = Color(40, 40, 40),
         BaseDarker = Color(61, 61, 61),
         Button = Color(51, 51, 51),
-        ButtonHover = Color(255, 153, 0), 
+        ButtonHover = Color(255, 185, 56), 
         CloseHover = Color(255, 89, 89),
 
         Green = Color(90, 200, 90),
@@ -43,5 +43,6 @@ MODULE.Config = {
             '!',
             '/'
         }
-    }
+    },
+    CustomProperties = true
 }

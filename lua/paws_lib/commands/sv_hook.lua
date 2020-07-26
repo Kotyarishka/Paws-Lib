@@ -1,24 +1,33 @@
 local MODULE = PAW_MODULE('lib')
 
 local function ParseCommand(pPlayer, sText)
-    
+    local tArgs
+    local sCommand
+    local sText2
+    local tCommand
     local sPrefix = string.sub(sText, 0, 1)
 
     if sPrefix == '/' or sPrefix == '!' then
-        local sText = string.sub(sText, 2)
+        sText = string.sub(sText, 2)
 
-        local tArgs = string.Split(sText, ' ')
-        local sCommand = tArgs[1]      
-        sText = table.concat(tArgs, ' ', 2)
+        tArgs = string.Split(sText, ' ')
+        sCommand = tArgs[1]      
+        sText2 = table.concat(tArgs, ' ', 2)
 
-        local tCommand = MODULE:Command(sCommand, true)
+        tCommand = MODULE:Command(sCommand, true)
 
         if tCommand != nil then
-            tCommand:OnRun(pPlayer, sText, tArgs)
+            tCommand:OnRun(pPlayer, sText2, tArgs)
 
             return ''
         end        
+    else        
+        if tCommand == nil then
+            hook.Run('Paws.Lib.CommandRun.All', 'chat', pPlayer, sText)
+        end         
     end
+
+    
 end 
 
 

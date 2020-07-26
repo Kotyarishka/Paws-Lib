@@ -3,12 +3,11 @@ local Chat = MODULE.Config.Chat or {}
 
 function MODULE:SendMessage(ply, MSG_TYPE, ...)
     local args = {...}
-    args = util.Compress(util.TableToJSON(args))
     
     if SERVER then
         net.Start('Paws.Lib.Msg')
             net.WriteInt(MSG_TYPE, 8)
-            net.WriteData(args, 255)
+            net.WriteTable(args)
         net.Send(ply)
     end
     
@@ -16,7 +15,7 @@ function MODULE:SendMessage(ply, MSG_TYPE, ...)
         net.Start('Paws.Lib.Msg')
             net.WriteEntity(ply)
             net.WriteInt(MSG_TYPE, 8)
-            net.WriteData(args, 255)
+            net.WriteTable(args)
         net.SendToServer()
     end
 end 

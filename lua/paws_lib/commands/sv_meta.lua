@@ -16,6 +16,7 @@ local m = {
 
     OnRun = function(self, pPlayer, sText)
         self.Run(pPlayer, sText)
+        hook.Run('Paws.Lib.CommandRun', self.command, pPlayer, sText)
     end,
 
     SetCommand = function(self, sString)

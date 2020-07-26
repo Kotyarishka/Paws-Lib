@@ -3,23 +3,17 @@ local Chat = MODULE.Config.Chat or {}
 
 if CLIENT then
 
-    local Prefixes = {
-        4, -1, 0
-    }
-
     local function RecieveMessage()
         local MSG_TYPE = net.ReadInt(8) or -1
-        local args = net.ReadData(255) 
-        args = util.JSONToTable(util.Decompress(args))
+        local args = net.ReadTable(512)
 
-        local toPrint = {} 
+        local toPrint = {}
 
-        if !table.HasValue(Prefixes, MSG_TYPE) then
-            table.insert(toPrint, Chat.PREFIX_COLOR)
-            table.insert(toPrint, Chat.PREFIX)
-            table.insert(toPrint, ' ')
-        end
-        
+        -- if !table.HasValue(Prefixes, MSG_TYPE) then
+        --     table.insert(toPrint, Chat.PREFIX_COLOR)
+        --     table.insert(toPrint, Chat.PREFIX)
+        --     table.insert(toPrint, ' ')
+        -- end 
         if MSG_TYPE == Chat.MESSAGES_TYPE.SUCCESS then
             table.insert(toPrint, Chat.SUCCESS_COLOR)
             table.insert(toPrint, Chat.SUCCESS_MSG)
@@ -40,7 +34,7 @@ if CLIENT then
             table.insert(toPrint, '[RP]')
             table.insert(toPrint, Color(255,255,255))
             table.insert(toPrint, ' ')
-        end 
+        end
 
         table.Add(toPrint, args)
 

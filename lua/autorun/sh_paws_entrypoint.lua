@@ -14,12 +14,12 @@ local m = {
     uID = 'newmodule',
     Title = 'New Module',
     Author = 'Newbie',
-    Version = '0.0.1',
+    Version = '0.0.1', 
 
     ROOT = 'paw_newmodule',
     CONFIG = 'config.lua',
 
-    FILESYSTEM = {},
+    FILESYSTEM = {}, 
     NETS = {},
 
     OnLoad = function(self)
