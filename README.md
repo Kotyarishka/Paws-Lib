@@ -1,3 +1,8 @@
+# NOT SUPPORTED
+# NOT SUPPORTED
+# NOT SUPPORTED
+
+
 # Introduction
 This library is designed to work with software developed by our team.
 **This library is open source and completely free.**
